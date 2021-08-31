@@ -18,6 +18,8 @@ public class CharacterControlls : MonoBehaviour {
     void Awake () {
         rigidbody.freezeRotation = true;
         rigidbody.useGravity = false;
+
+        rigidbody = GetComponent<Rigidbody>();
     }
  
     void FixedUpdate () {
