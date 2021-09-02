@@ -2,7 +2,6 @@ using UnityEngine;
  
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (SphereCollider))]
- 
 public class CharacterControlls : MonoBehaviour {
  
     public float speed = 10.0f;
@@ -11,16 +10,18 @@ public class CharacterControlls : MonoBehaviour {
     public bool canJump = true;
     public float jumpHeight = 2.0f;
     private bool grounded = false;
-    public Rigidbody rigidbody;
+    Rigidbody rigidbody;
+    Collider _sphereCollider;
  
  
  
     void Awake () {
+        rigidbody = GetComponent<Rigidbody>();
         rigidbody.freezeRotation = true;
         rigidbody.useGravity = false;
-
-        rigidbody = GetComponent<Rigidbody>();
+        _sphereCollider = GetComponent<Collider>();
     }
+    
  
     void FixedUpdate () {
         if (grounded) {
@@ -51,28 +52,19 @@ public class CharacterControlls : MonoBehaviour {
     void OnCollisionStay()
     {
         grounded = true;    
+        Debug.LogError("Stay");
     }
 
     void OnCollisionEnter(Collision other)
     {
+        Debug.LogError("Enter");
     }
 
     void OnCollisionExit(Collision other)
     {
+        Debug.LogError("Exit");
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-    }
-
-    void OnTriggerStay(Collider other)
-    {
-    }
-
+    
 
     float CalculateJumpVerticalSpeed () {
         return Mathf.Sqrt(2 * jumpHeight * gravity);
