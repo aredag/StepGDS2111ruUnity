@@ -31,6 +31,7 @@ public class StartUIPanel : BaseUIPanel
     void LoadStartScene()
     {
         HideUIPanel();
+        Generator.GenerateTextures();
         LoadScene.LoadSceneAsyncWithIndex(_startSceneIndex);    
     }
 
