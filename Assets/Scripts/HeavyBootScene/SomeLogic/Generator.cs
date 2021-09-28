@@ -1,15 +1,32 @@
 using UnityEngine;
 
-public class Generator 
+public class Generator : MonoBehaviour
 {
-    public static void GenerateTextures(int x = 1024, int y = 1024, int amountToGenerate = 100)
+    [SerializeField] private Texture2D[] textures;
+
+    private void Start()
     {
+        StartCoroutine(GenerateTextures());
+    }
+
+    public void OnDestroy()
+    {
+        StopAllCoroutines();
+        for (int i = 0; i < textures.Length; i++)
+            DestroyImmediate(textures[i]);
+        textures = System.Array.Empty<Texture2D>();
+    }
+
+    private System.Collections.IEnumerator GenerateTextures(int x = 1024, int y = 1024, int amountToGenerate = 100)
+    {
+        textures = new Texture2D[amountToGenerate];
         for (var i = 0; i < amountToGenerate; i++)
         {
-           var t =  new Texture2D(x, y)
-           {
-               name = $"ScriptCreatedTexture-{i}"
-           };
+            textures[i] = new Texture2D(x, y)
+            {
+                name = $"ScriptCreatedTexture-{i}"
+            };
+            yield return null;
         }
     }
 }
