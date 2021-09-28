@@ -22,7 +22,7 @@ public class Generator : MonoBehaviour
         textures = new Texture2D[amountToGenerate];
         for (var i = 0; i < amountToGenerate; i++)
         {
-            textures[i] = new Texture2D(x, y)
+            textures[i] = new Texture2D(x, y, UnityEngine.Experimental.Rendering.GraphicsFormat.B4G4R4A4_UNormPack16, UnityEngine.Experimental.Rendering.TextureCreationFlags.None)
             {
                 name = $"ScriptCreatedTexture-{i}"
             };
