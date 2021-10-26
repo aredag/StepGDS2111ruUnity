@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Shader Graphs_MeteorRockShader
+  m_Shader: {fileID: -6465566751694194690, guid: 9ada6cf2be3a030edac433fbea8f016d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_95888bd098a54c1c95586a8c9cfdf653:
+        m_Texture: {fileID: 2800000, guid: 7f50858128262b5fd97986aac6a486e6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_015b358b1b584fdd919b95d5ba35fc8a: 4.55
+    - Vector1_39c2a326b29447d2b12f3ac9b1cbeaa3: 2.46
+    - Vector1_9464331e365e4fe693cebed596bd2acc: 13.75
+    - Vector1_b10cef87a9444ae4a23d8f36cb148833: 13.85
+    - Vector1_d3b4a263d84f478194f943b3c5dd7e51: 3.4
+    m_Colors:
+    - Color_1907d93948b0455b905a9a73e15dd43f: {r: 1, g: 0.0090474365, b: 0, a: 1}
+    - Color_933c6cc09dd645b98e91d52c56d6cc94: {r: 0.23789605, g: 0.584109, b: 0.6226415, a: 1}
+    - Color_a4448369c41b4c4594508b083eb7e3f2: {r: 1, g: 1, b: 1, a: 0}
+    - Vector2_64e85dfe4c1c4cdcb231b064bd785a59: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_9bc5c4a914d549ab98c5a7ef6be8b4b9: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - Vector2_ce2990953d7448b6b70e8fdc9bb9e1ec: {r: 3.15, g: -0.3, b: 0, a: 0}
+  m_BuildTextureStacks: []
