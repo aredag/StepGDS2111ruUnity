@@ -10,4 +10,5 @@ public enum RelicType
 public class Relic : MonoBehaviour
 {
     public RelicType relicType = RelicType.Heartbreaker;
+    public float damageRadius = 5f;
 }
